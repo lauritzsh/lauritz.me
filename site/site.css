@@ -1,0 +1,15 @@
+body {
+	font-family: sans-serif;
+	color: #222;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: #333;
+		color: #fff;
+	}
+
+	a {
+		color: #fff;
+	}
+}

@@ -2,7 +2,7 @@ import Document, { DocumentContext } from 'next/document';
 import { css } from '../utils/css';
 
 export default class MyDocument extends Document {
-  static async getStaticProps(ctx: DocumentContext) {
+  static async getInitialProps(ctx: DocumentContext) {
     const originalRenderPage = ctx.renderPage;
 
     let extractedStyles: string[] = [];

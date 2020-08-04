@@ -1,12 +1,7 @@
 import { createStyled } from '@stitches/styled';
 
 export const { styled, css } = createStyled({
-  tokens: {
-    colors: {
-      red: 'tomato',
-      orange: 'orange',
-    },
-  },
+  tokens: {},
 });
 
 export default { styled, css };

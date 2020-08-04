@@ -1,4 +1,10 @@
-import Document, { DocumentContext } from 'next/document';
+import Document, {
+  DocumentContext,
+  Html,
+  Head,
+  Main,
+  NextScript,
+} from 'next/document';
 import { css } from '../utils/css';
 
 export default class MyDocument extends Document {
@@ -25,5 +31,18 @@ export default class MyDocument extends Document {
         </>
       ),
     };
+  }
+
+  render() {
+    return (
+      <Html>
+        <Head />
+        <body>
+          <script src="noflash.js" />
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
   }
 }

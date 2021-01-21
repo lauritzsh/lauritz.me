@@ -8,6 +8,11 @@ jobs:
       #   run: |
       #     sudo apt install texlive-latex-extra
 
+      - name: Install Font Awesome
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y fonts-font-awesome
+
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
         with:

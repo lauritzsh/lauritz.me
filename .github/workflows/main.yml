@@ -29,14 +29,16 @@ jobs:
             mkdir out
             cd cv
             xelatex cv.tex
-            cd ..
-            mv cv/cv.pdf out/cv.pdf
 
       - name: Install and Build 🔧
         run: |
           yarn
           yarn build
           yarn export
+
+      - name: Move CV
+        run: |
+          mv cv/cv.pdf out/cv.pdf
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1

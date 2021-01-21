@@ -23,7 +23,8 @@ jobs:
 
       - name: Move CV
         run: |
-          mv cv/cv-da.pdf out/cv-da.pdf
+          mkdir -p out/cv
+          mv cv/cv-da.pdf out/cv/cv-da.pdf
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1

@@ -10,9 +10,10 @@ jobs:
 
       - name: Install Font Awesome
         run: |
-          wget http://www.tex.ac.uk/tex-archive/fonts/fontawesome/FontAwesome.otf
-          sudo cp FontAwesome.otf /usr/local/share/fonts/
-          sudo fc-cache /usr/local/share/fonts
+          sudo tlmgr install fontawesome
+          # wget http://www.tex.ac.uk/tex-archive/fonts/fontawesome/FontAwesome.otf
+          # sudo cp FontAwesome.otf /usr/local/share/fonts/
+          # sudo fc-cache /usr/local/share/fonts
 
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1

@@ -22,7 +22,9 @@ jobs:
       - name: Build CV
         uses: xu-cheng/latex-action@v2
         with:
-          pre_compile: tlmgr install fontawesome
+          pre_compile: |
+            tlmgr update --self
+            tlmgr install fontawesome
           working_directory: cv
           root_file: cv.tex
           latexmk_use_xelatex: true

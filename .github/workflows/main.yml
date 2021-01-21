@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Install LaTeX
         run: |
-          apt install texlive-latex-extra
+          sudo apt install texlive-latex-extra
 
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1

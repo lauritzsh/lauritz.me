@@ -26,8 +26,11 @@ jobs:
           run: |
             tlmgr update --self
             tlmgr install carlito
+            mkdir out
             cd cv
             xelatex cv.tex
+            cd ..
+            mv cv/cv.pdf out/cv.pdf
 
       - name: Install and Build 🔧
         run: |

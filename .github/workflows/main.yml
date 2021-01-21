@@ -8,13 +8,6 @@ jobs:
       #   run: |
       #     sudo apt install texlive-latex-extra
 
-      - name: Install Font Awesome
-        run: |
-          sudo tlmgr install fontawesome
-          # wget http://www.tex.ac.uk/tex-archive/fonts/fontawesome/FontAwesome.otf
-          # sudo cp FontAwesome.otf /usr/local/share/fonts/
-          # sudo fc-cache /usr/local/share/fonts
-
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
         with:
@@ -29,6 +22,7 @@ jobs:
       - name: Build CV
         uses: xu-cheng/latex-action@v2
         with:
+          pre_compile: tlmgr install fontawesome
           working_directory: cv
           root_file: cv.tex
           latexmk_use_xelatex: true

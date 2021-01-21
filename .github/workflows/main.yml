@@ -23,7 +23,7 @@ jobs:
             tlmgr install fontawesome5
           working_directory: cv
           root_file: cv.tex
-          latexmk_use_xelatex: true
+          latexmk_use_lualatex: true
 
       - name: Install and Build 🔧
         run: |

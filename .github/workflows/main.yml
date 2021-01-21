@@ -21,6 +21,7 @@ jobs:
         with:
           pre_compile: |
             tlmgr update --self
+            tlmgr update fontspec
             tlmgr install fontawesome
             tlmgr install fontawesome5
           working_directory: cv

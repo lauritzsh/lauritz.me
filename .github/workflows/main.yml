@@ -24,7 +24,9 @@ jobs:
         with:
           pre_compile: |
             tlmgr update --self
+            tlmgr update --all
             tlmgr install fontawesome
+            tlmgr install fontawesome5
           working_directory: cv
           root_file: cv.tex
           latexmk_use_xelatex: true

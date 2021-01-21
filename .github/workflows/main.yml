@@ -8,8 +8,14 @@ jobs:
         run: |
           sudo apt-get update -y
           sudo apt-get install -y fonts-crosextra-carlito
-          sudo fc-cache -fv
           fc-cache -fv
+
+          sudo apt-get install -y texlive-latex-extra
+          sudo apt-get install texlive-xetex
+          tlmgr update --self
+          tlmgr update fontspec
+          tlmgr install fontawesome
+          tlmgr install fontawesome5
 
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
@@ -17,16 +23,11 @@ jobs:
           persist-credentials: false
 
       - name: Build CV
-        uses: xu-cheng/latex-action@v2
-        with:
-          pre_compile: |
-            tlmgr update --self
-            tlmgr update fontspec
-            tlmgr install fontawesome
-            tlmgr install fontawesome5
-          working_directory: cv
-          root_file: cv.tex
-          latexmk_use_lualatex: true
+        run: |
+          cd cv
+          xelatex cv.pdf
+          cd ..
+          mv cv/cv.pdf out/cv.pdf
 
       - name: Install and Build 🔧
         run: |

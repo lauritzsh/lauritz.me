@@ -13,7 +13,7 @@ jobs:
         with:
           run: |
             cd cv
-            xelatex cv.tex
+            xelatex cv-da.tex
 
       - name: Install and Build 🔧
         run: |
@@ -23,7 +23,7 @@ jobs:
 
       - name: Move CV
         run: |
-          mv cv/cv.pdf out/cv.pdf
+          mv cv/cv-da.pdf out/cv-da.pdf
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1

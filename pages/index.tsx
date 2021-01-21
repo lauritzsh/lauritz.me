@@ -20,6 +20,9 @@ function IndexPage() {
           <a href="https://github.com/lauritzsh">GitHub</a>. I am also on{" "}
           <a href="https://www.linkedin.com/in/lauritzhilsoe/">LinkedIn</a>.
         </p>
+        <p>
+          My CV in Danish can be found <a href="/cv-da.pdf">here</a>.
+        </p>
       </div>
     </Layout>
   );

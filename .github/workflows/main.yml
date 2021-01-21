@@ -4,9 +4,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-20.04
     steps:
-      - name: Install LaTeX
-        run: |
-          sudo apt install texlive-latex-extra
+      # - name: Install LaTeX
+      #   run: |
+      #     sudo apt install texlive-latex-extra
 
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
@@ -20,10 +20,15 @@ jobs:
           yarn export
 
       - name: Build CV
+        uses: xu-cheng/latex-action@v2
+        with:
+          working_directory: cv
+          root_file: cv.tex
+          latexmk_use_xelatex: true
         run: |
-          cd cv
-          xelatex cv.tex
-          cd ..
+        #   cd cv
+        #   xelatex cv.tex
+        #   cd ..
           mv cv/cv.pdf out/cv.pdf
 
       - name: Deploy 🚀

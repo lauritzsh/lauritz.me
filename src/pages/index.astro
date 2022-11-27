@@ -1,15 +1,58 @@
 ---
+import "../styles/base.css";
+
+import GitHub from "./GitHub";
+import Twitter from "./Twitter";
+import LinkedIn from "./LinkedIn";
+
+import technologist from "./technologist.png";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <title>Lauritz Hilsøe</title>
+  </head>
+  <body>
+    <main class="max-w-5xl mx-auto h-screen flex items-center">
+      <div class="-translate-y-16 flex flex-col px-8">
+        <h1 class="flex items-center gap-2">
+          Hello, I'm Lauritz.
+          <img src={technologist} class="w-10 h-10" />
+        </h1>
+        <p>I am a senior frontend developer based in Copenhagen, Denmark.</p>
+        <ul class="flex gap-4">
+          <li>
+            <a
+              href="https://github.com/lauritzsh"
+              class="text-white text-2xl"
+              target="_blank"
+              ><GitHub />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/lauritzsh"
+              class="text-white text-2xl"
+              target="_blank"
+              ><Twitter />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/lauritzhilsoe/"
+              class="text-white text-2xl"
+              target="_blank"
+              ><LinkedIn />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
 </html>

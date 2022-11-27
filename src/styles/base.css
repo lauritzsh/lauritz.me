@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0a0a0a;
+    @apply text-white;
+  }
+
+  h1 {
+    @apply text-4xl mb-4;
+  }
+
+  p {
+    @apply mb-4;
+  }
+}

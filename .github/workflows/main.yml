@@ -25,9 +25,9 @@ jobs:
         with:
           run: |
             cd cv
-            xelatex cv-da.tex
+            # xelatex cv-da.tex
             xelatex cv-en.tex
-            mv cv-da.pdf ../dist
+            # mv cv-da.pdf ../dist
             mv cv-en.pdf ../dist
 
       - name: Deploy

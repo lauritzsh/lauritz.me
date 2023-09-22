@@ -181,7 +181,7 @@
 \newcommand{\cvsection}[2][]{%
   \bigskip%
   \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}%
-  {\textcolor{accent}{\LARGE\bfseries\MakeUppercase{#2}}}\\[-1ex]%
+  {\textcolor{accent}{\Large\bfseries\MakeUppercase{#2}}}\\[-1ex]%
   {\textcolor{accent}{\rule{\linewidth}{2pt}}\par}\medskip
 }
 
